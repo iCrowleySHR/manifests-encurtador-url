@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: encurtador-url
-          image: icrowleyshr/encurtador-url:1762366475
+          image: icrowleyshr/encurtador-url:1762366825
           ports:
             - containerPort: 8000
