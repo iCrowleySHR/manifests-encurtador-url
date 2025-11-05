@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: encurtador-url
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: encurtador-url
+  template:
+    metadata:
+      labels:
+        app: encurtador-url
+    spec:
+      containers:
+        - name: encurtador-url
+          image: icrowleyshr/encurtador-url:latest
+          ports:
+            - containerPort: 8000
