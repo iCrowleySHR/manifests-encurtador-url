@@ -245,5 +245,36 @@ Assim, sempre que o pipeline atualizar o `deployment.yaml` com uma nova tag de i
 
 <img width="1918" height="1037" alt="image" src="https://github.com/user-attachments/assets/0493d89e-2e6e-40b0-9de2-d86136b6a12e" />
 
-
 ---
+
+##  4. Acessando a Aplicação e Testando o CI/CD
+
+Após o ArgoCD sincronizar o repositório e o Kubernetes implantar o pod da aplicação, você pode acessá-la localmente utilizando port-forward.  
+Como a porta 8080 já é utilizada pelo painel do ArgoCD, usaremos a porta 8081 para acessar o serviço do encurtador.
+
+```bash
+kubectl port-forward svc/encurtador-service 8081:8080
+```
+
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/35cde89e-39ad-4184-ac3d-99a449cbead0" />
+
+Agora abra o navegador e acesse a URL abaixo para visualizar a aplicação em funcionamento:
+
+```bash
+http://localhost:8081/urls/
+```
+
+
+Se tudo estiver correto, você verá a interface da aplicação Encurtador de URL rodando dentro do Kubernetes.
+
+Toda vez que o repositório da aplicação *encurtador-url* for atualizado (por exemplo, quando uma nova imagem Docker for publicada), o ArgoCD detectará a mudança nos manifests e aplicará automaticamente o novo deploy no cluster, refletindo a atualização em tempo real.
+
+### Antes da Commit no repositório encurtador_url
+<img width="1916" height="1079" alt="image" src="https://github.com/user-attachments/assets/6af88250-5cf6-47e0-8d20-95ea40ade7d1" />
+
+### Depois da Commit no repositório encurtador_url
+
+
+
+
+
