@@ -283,6 +283,8 @@ http://localhost:8081/urls/
 
 Se tudo estiver correto, você verá a interface da aplicação Encurtador de URL rodando dentro do Kubernetes.
 
+<img width="1912" height="1015" alt="image" src="https://github.com/user-attachments/assets/cadf9848-e092-4e36-8dcb-7dd06ba87882" />
+
 Toda vez que o repositório da aplicação *encurtador-url* for atualizado (por exemplo, quando uma nova imagem Docker for publicada), o ArgoCD detectará a mudança nos manifests e aplicará automaticamente o novo deploy no cluster, refletindo a atualização em tempo real.
 
 ### Antes da Commit no repositório encurtador_url
