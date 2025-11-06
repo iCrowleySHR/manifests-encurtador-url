@@ -252,6 +252,7 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 ---
 
+## Análise da etapa anterior
 
 Assim, sempre que o pipeline atualizar o `deployment.yaml` com uma nova tag de imagem, o ArgoCD fará o deploy automaticamente.
 
@@ -262,25 +263,23 @@ Assim, sempre que o pipeline atualizar o `deployment.yaml` com uma nova tag de i
 
 ---
 
-##  4. Acessando a Aplicação e Testando o CI/CD
+##  4. Acessando a Aplicação e Testando o CI/CD 
 
-Após o ArgoCD sincronizar o repositório e o Kubernetes implantar o pod da aplicação, você pode acessá-la localmente utilizando port-forward.  
-Como a porta 8080 já é utilizada pelo painel do ArgoCD, usaremos a porta 8081 para acessar o serviço do encurtador.
+A `service.yaml` já tem a função de expor a porta `8081` sem o `Port-Forward`. Então basta acessar o URL abaixo que a aplicação já estará funcionando.
 
-```bash
-kubectl port-forward svc/encurtador-service 8081:8080
-```
-
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/35cde89e-39ad-4184-ac3d-99a449cbead0" />
-<img width="1912" height="1015" alt="image" src="https://github.com/user-attachments/assets/cadf9848-e092-4e36-8dcb-7dd06ba87882" />
-
-
-Agora abra o navegador e acesse a URL abaixo para visualizar a aplicação em funcionamento:
+A `service.yaml` tem a função de deixar aplicação acessivel tanto fora do cluster como fora dela.
 
 ```bash
 http://localhost:8081/urls/
 ```
 
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/35cde89e-39ad-4184-ac3d-99a449cbead0" />
+
+<img width="1912" height="1015" alt="image" src="https://github.com/user-attachments/assets/cadf9848-e092-4e36-8dcb-7dd06ba87882" />
+
+---
+
+## 5. Conclusão 
 
 Se tudo estiver correto, você verá a interface da aplicação Encurtador de URL rodando dentro do Kubernetes.
 
