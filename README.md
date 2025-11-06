@@ -285,12 +285,15 @@ Se tudo estiver correto, você verá a interface da aplicação Encurtador de UR
 
 <img width="1912" height="1015" alt="image" src="https://github.com/user-attachments/assets/cadf9848-e092-4e36-8dcb-7dd06ba87882" />
 
+### Exemplo
+
 Toda vez que o repositório da aplicação *encurtador-url* for atualizado (por exemplo, quando uma nova imagem Docker for publicada), o ArgoCD detectará a mudança nos manifests e aplicará automaticamente o novo deploy no cluster, refletindo a atualização em tempo real.
 
-### Antes da Commit no repositório encurtador_url
+#### Antes da Commit no repositório encurtador_url
+
 <img width="1916" height="1079" alt="image" src="https://github.com/user-attachments/assets/6af88250-5cf6-47e0-8d20-95ea40ade7d1" />
 
-### Depois da Commit no repositório encurtador_url
+#### Depois da Commit no repositório encurtador_url
 
 <img width="1911" height="973" alt="image" src="https://github.com/user-attachments/assets/afab9a9a-7fac-4089-a29e-f78d07a10584" />
 
