@@ -43,7 +43,7 @@ manifests/
 
 Define o serviço interno no cluster:
 
-```bash
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -64,7 +64,7 @@ spec:
 
 Define o **Deployment** da aplicação — ou seja, como o Kubernetes vai executar e manter os containers em funcionamento.
 
-```bash
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
