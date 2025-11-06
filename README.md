@@ -229,6 +229,10 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 | **Path** | `.` |
 | **Cluster** | `https://kubernetes.default.svc` |
 | **Namespace** | `default` |
+| **POLICY** | `Automatic` |
+| **PRUNE** | `Enabled` |
+| **SELF HEAL** | `Enabled` |
+
 
 <img width="1915" height="1040" alt="image" src="https://github.com/user-attachments/assets/9a86abd6-f2cf-4b8e-bc47-6f8c77f5a7df" />
 <img width="1918" height="980" alt="image" src="https://github.com/user-attachments/assets/acdf438f-60de-474f-9b8b-f33577e3c799" />
@@ -236,13 +240,6 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 ---
 
-### 4. Ative Auto-Sync
-
-No painel do ArgoCD, habilite:
-
-- `SYNC POLICY → Automatic`
-- `PRUNE → Enabled`
-- `SELF HEAL → Enabled`
 
 Assim, sempre que o pipeline atualizar o `deployment.yaml` com uma nova tag de imagem, o ArgoCD fará o deploy automaticamente.
 
