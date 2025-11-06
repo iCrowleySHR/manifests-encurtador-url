@@ -245,6 +245,9 @@ Assim, sempre que o pipeline atualizar o `deployment.yaml` com uma nova tag de i
 
 <img width="1918" height="1037" alt="image" src="https://github.com/user-attachments/assets/0493d89e-2e6e-40b0-9de2-d86136b6a12e" />
 
+<img width="564" height="362" alt="image" src="https://github.com/user-attachments/assets/1cf8024a-73cb-4078-81ca-6ad88379b9bc" />
+
+
 ---
 
 ##  4. Acessando a Aplicação e Testando o CI/CD
@@ -257,6 +260,8 @@ kubectl port-forward svc/encurtador-service 8081:8080
 ```
 
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/35cde89e-39ad-4184-ac3d-99a449cbead0" />
+<img width="1912" height="1015" alt="image" src="https://github.com/user-attachments/assets/cadf9848-e092-4e36-8dcb-7dd06ba87882" />
+
 
 Agora abra o navegador e acesse a URL abaixo para visualizar a aplicação em funcionamento:
 
@@ -274,8 +279,9 @@ Toda vez que o repositório da aplicação *encurtador-url* for atualizado (por 
 
 ### Depois da Commit no repositório encurtador_url
 
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/fbbd6a43-0dd9-4200-b003-015c953beb8a" />
+<img width="1911" height="973" alt="image" src="https://github.com/user-attachments/assets/afab9a9a-7fac-4089-a29e-f78d07a10584" />
 
+<img width="1918" height="980" alt="image" src="https://github.com/user-attachments/assets/6493376c-13b2-4104-bf28-536a64661328" />
 
 
 
