@@ -1,7 +1,22 @@
-# Repositório de Manifests – encurtador_url
+<div align="center">
 
-Este repositório contém os **manifests do Kubernetes** usados para realizar o **deploy da aplicação Encurtador de URL** no cluster.
-Ele é responsável por descrever **como o Kubernetes deve executar e expor a aplicação**.
+# Manifests – encurtador_url
+### Kubernetes - ArgoCD - Docker - CI/CD
+
+![Kubernetes](https://img.shields.io/badge/Kubernetes-Manifests-blue)
+![Rancher Desktop](https://img.shields.io/badge/Rancher%20Desktop-Local%20Cluster-0A66C2)
+![ArgoCD](https://img.shields.io/badge/ArgoCD-CD-orange)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-CI-2088FF)
+![Git](https://img.shields.io/badge/Git-Version%20Control-F05032)
+![Docker](https://img.shields.io/badge/Docker-Integrated-blue)
+
+</div>
+
+---
+
+## Sobre o Projeto
+
+Este repositório contém os **manifests do Kubernetes** usados para realizar o **deploy da aplicação Encurtador de URL** no cluster. Ele é responsável por descrever **como o Kubernetes deve executar e expor a aplicação**.
 
 ---
 
@@ -11,9 +26,6 @@ Os manifests são arquivos YAML que definem recursos no Kubernetes, como:
 
 - **Deployment** → Garante que a aplicação esteja sempre rodando.
 - **Service** → Expõe a aplicação dentro (ou fora) do cluster.
-- **ConfigMaps, Secrets, Ingress, etc.** → (opcionais) configuram e estendem o comportamento da aplicação.
-
- Cada mudança feita nesses arquivos pode ser aplicada diretamente no cluster via `kubectl apply -f`.
 
 ---
 
